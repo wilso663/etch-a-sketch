@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Etch-a-Sketch</title>
+</head>
+<link rel="stylesheet" href="./css/styles.css">
+<body>
+      <h1>Etch-a-Sketch</h1>
+      <div class="settings__buttons">
+        <button class="color-choice" data-color="black">Black</button>
+        <button class="color-choice" data-color="rainbow">Rainbow</button>
+        <button class="color-choice" data-color="gray" type="button">Gray Scale</button>
+        <button class="color-choice" data-color="eraser" type="button">Eraser</button>
+        <button class="color-choice">Pick: <input type="color" value="#ff0000" id="input-color"></button>
+        
+      </div>
+      <div class="board__wrapper">
+        <div class="board__container"></div>
+      </div>
+      <div class="settings">
+        <div><button class="clear">Clear</button></div>
+        <div class="settings__slider">
+          <p>Grid Resolution Slider</p>
+          <input type="range" min="16" max="100" value="15" id="sizeRange" class="slider">
+          <p>Smallest To Largest</p>
+        </div>
+      </div>
+
+  <script src="./js/script.js"></script>
+</body>
+
+</html>

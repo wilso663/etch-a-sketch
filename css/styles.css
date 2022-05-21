@@ -1,0 +1,95 @@
+:root {
+  --content-width: 400px;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+h1{
+  font-family:Arial, Helvetica, sans-serif;
+  font-size: 2.5em;
+  text-align: center;
+  height: 27px;
+  width: var(--content-width);
+  margin-top: 5px;
+}
+
+button {
+  font-family:Arial, Helvetica, sans-serif;
+  font-size: 14px;
+  border: 1px solid black;
+  line-height: 27px;
+}
+
+.settings__buttons {
+  display: flex;
+  justify-content: space-between;
+  width: calc(75vw + 40px);
+  max-width: calc(var(--content-width) + 30px);
+  margin: 0 auto;
+  flex-wrap: wrap;
+}
+
+.settings__buttons {
+}
+
+.board__wrapper{
+  height: 75vh;
+  width: 75vw;
+  max-height: var(--content-width);
+  max-width: var(--content-width);
+  position: relative;
+  margin: 30px auto;
+}
+
+.board__wrapper::before {
+  content: '';
+  position: absolute;
+  top: -15px;
+  bottom: -15px;
+  right: -15px;
+  left: -15px;
+  background-color: #FFF;
+  z-index: -1;
+}
+
+.board__wrapper::after {
+  content: '';
+  position: absolute;
+  top: -15px;
+  bottom: -15px;
+  right: -15px;
+  left: -15px;
+  background-color: #FFF;
+  z-index: -2;
+}
+
+.board__wrapper::before, .board__wrapper::after{
+  background: rgb(214,56,39);
+  background: linear-gradient(90deg, rgba(214,56,39,1) 35%, rgba(255,0,185,1) 100%);
+}
+
+.board__container{
+  display: grid;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  background-color: white;
+}
+
+.board__container > * {
+  height: 100%;
+  background-color: #FFFFFF;
+  transition: all 0.5s;
+}
+
+@media only screen and (min-width: 1500px){
+  :root {
+    --content-width: 500px;
+  }
+}
